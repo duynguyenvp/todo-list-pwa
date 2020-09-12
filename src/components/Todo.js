@@ -25,7 +25,7 @@ import {
   removeTodo,
 } from "../stores/todoStore";
 
-const API_URL = "http://localhost:3004";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const TodoList = () => {
   const [loading, setLoading] = useState(false);
