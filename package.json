@@ -21,7 +21,7 @@
     "serve": "^11.3.2"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"serve -s build\" \"json-server --watch build/db.json --port 3004\"",
     "dev": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 3004\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
